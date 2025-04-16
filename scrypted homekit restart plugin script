@@ -1,5 +1,5 @@
 // Replace '@scrypted/homekit' with the with the ID of any plugin you need to restart
-// Create a dummy switch in scrypted and set up an automation to fire this script when you hit the switch
+// Create a dummy switch in scrypted or home assistant and set up an automation to fire this script when you hit the switch
 const pluginId = '@scrypted/homekit';
 
 async function restartPlugin() {
