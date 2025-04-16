@@ -1,0 +1,13 @@
+// Replace '@scrypted/homekit' with the with the ID of any plugin you need to restart
+// Create a dummy switch in scrypted and set up an automation to fire this script when you hit the switch
+const pluginId = '@scrypted/homekit';
+
+async function restartPlugin() {
+    const plugins = await systemManager.getComponent('plugins');
+    await plugins.reload(pluginId);
+    console.log(`Plugin "${pluginId}" has been restarted.`);
+}
+
+restartPlugin().catch(err => {
+    console.error(`Error restarting plugin "${pluginId}":`, err);
+});
